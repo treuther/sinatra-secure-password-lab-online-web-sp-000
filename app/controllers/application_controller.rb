@@ -56,6 +56,7 @@ class ApplicationController < Sinatra::Base
     erb :failure
   end
 
+#clears the session data and redirects to the home page
   get "/logout" do
     session.clear
     redirect "/"
