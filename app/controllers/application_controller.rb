@@ -50,6 +50,8 @@ class ApplicationController < Sinatra::Base
       end
     end
 
+#renders a failure.erb page. This will be accessed if there is an error
+#logging in or signing up
   get "/failure" do
     erb :failure
   end
