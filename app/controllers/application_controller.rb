@@ -42,6 +42,10 @@ class ApplicationController < Sinatra::Base
     erb :login
   end
 
+#Finds user by username.
+#If user name is found AND password matches based on #authenticate method
+#then user is redirected to account
+#if login faile, then use is redirected to failure page
   post "/login" do
       @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
