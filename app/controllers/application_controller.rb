@@ -19,6 +19,8 @@ class ApplicationController < Sinatra::Base
     erb :signup
   end
 
+#If no username or password, redirects to failure
+#Else, creates a username and password and redirects to login
   post "/signup" do
     if params[:username] == "" || params[:password] == ""
       redirect '/failure'
