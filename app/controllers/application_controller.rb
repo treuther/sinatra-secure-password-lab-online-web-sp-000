@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "password_security"
   end
 
+#renders an index.erb file with links to signup or login
   get "/" do
     erb :index
   end
