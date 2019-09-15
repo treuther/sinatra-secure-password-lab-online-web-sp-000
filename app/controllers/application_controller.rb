@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
     erb :account
   end
 
-
+#renders a form for logging in
   get "/login" do
     erb :login
   end
