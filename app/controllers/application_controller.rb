@@ -13,6 +13,8 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+#renders a form to create a new user. The form includes fields for
+#username and password
   get "/signup" do
     erb :signup
   end
